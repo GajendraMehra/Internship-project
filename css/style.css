@@ -1,0 +1,237 @@
+custom/* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
+
+html,
+body,
+.view {
+  height: 100%; }
+  :root {
+    --main-dark: #2c3a47;
+    --main-background: #f7f7f7;
+    --blue-light: #25ccf7;
+    --blue: #1b9cfc;
+    --blue-dark: #182c61;
+    --red: #fd7272;
+    --green-light: #55e6c1;
+    --green-dark: #58b19f;
+    --yellow: #eab543;
+    --magenta: #6d214f;
+  }
+
+@media (max-width: 740px) {
+  .full-page-intro {
+    height: 1000px; } }
+
+/* Half Page Carousel itself*/
+.carousel {
+  height: 50%; }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item,
+    .carousel .carousel-inner .active {
+      height: 100%; }
+
+/* Adjustment for mobile devices*/
+@media (max-width: 776px) {
+  .carousel {
+    height: 100%; } }
+
+/* Navbar animation */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.top-nav-collapse {
+  background-color: #1C2331; }
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331; } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #1C2331; }
+
+
+  /* Basic page resets */
+  * {
+    /* Removes default padding and margin from components */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 200ms;
+  }
+
+
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+  #particles-js {
+  position: relative;
+    width: 100%;
+    height: 30em;
+
+    background-image: url("../images/banner.jpg");
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  #login {
+    background: var(--main-background);
+    /* To center the customcard */
+    position: absolute;
+    top: 62%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+
+
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+  }
+  #signup {
+    background: var(--main-background);
+    /* To center the customcard */
+    position: absolute;
+    top: 82%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+  }
+  .navbar{
+    background: var(--magenta);
+  }
+  /* Validation Related Styles */
+form input:valid {
+  /* valid pseudo-selector selects those input fields which have valid values in them */
+  border-bottom: 2px solid var(--green-dark);
+}
+
+form input:invalid {
+  /* invalid pseudo-selector selects those input fields which have invalid values in them */
+  border-bottom: 2px solid var(--red);
+}
+
+/* Aesthetics related styles */
+
+.container1 {
+  background: linear-gradient(to right bottom, var(--blue), var(--blue-dark));
+  height: 140%;
+  width: 100vw;
+}
+
+/* This customcard contains the form elements */
+.customcard {
+  background: var(--main-background);
+  /* To center the customcard */
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width:30em;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+
+.customcard-header {
+  background-color: var(--yellow);
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
+
+.customcard-header h1 {
+  font-weight: 400;
+}
+
+.customcard-content {
+  padding: 1rem;
+}
+
+.customcard-footer {
+  padding: 1rem;
+}
+
+.form {
+  /* More on flex here: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.form > * {
+  /* Selects all the child elements of the form class and applies a margin on them */
+  margin: 1rem 0;
+}
+
+.form .input-group {
+  width: 80%;
+}
+
+form input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--main-dark);
+  padding: 1rem 0;
+  box-shadow: none;
+  width: 100%;
+}
+
+.form input:focus + label {
+  /* When any input is focused show its label. */
+  opacity: 0.6;
+  font-size: 1.2rem;
+}
+
+.form input:focus::placeholder {
+  /* When any input is focused hide its placeholder text */
+  color: transparent;
+}
+
+.form label {
+  display: block;
+  color: var(--main-dark);
+  width: 100%;
+  opacity: 0;
+  font-size: 0;
+}
+
+.customcard-footer {
+  text-align: center;
+}
+
+.customcard-footer .button {
+  background-color: var(--main-dark);
+  border: none;
+  padding: 1rem 3rem;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.customcard-footer .button:hover {
+  background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Increase the width of customcard on mobile devices */
+  .customcard {
+    width: 90%;
+  }
+}
