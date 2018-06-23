@@ -15,6 +15,7 @@ body,
     --green-dark: #58b19f;
     --yellow: #eab543;
     --magenta: #6d214f;
+    --green: #00C851;
   }
 
 @media (max-width: 740px) {
@@ -22,6 +23,12 @@ body,
     height: 1000px; } }
 
 /* Half Page Carousel itself*/
+.container1 {
+  background: linear-gradient(to right bottom, var(--blue), var(--blue-dark));
+  height: 140%;
+  width: 100vw;
+}
+
 .carousel {
   height: 50%; }
   .carousel .carousel-inner {
@@ -37,10 +44,10 @@ body,
 
 /* Navbar animation */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color:rgb(109, 33, 79,0.7); }
 
 .top-nav-collapse {
-  background-color: #1C2331; }
+  background-color: rgb(109, 33, 79) ; }
 
 /* Adding color to the Navbar on mobile */
 @media only screen and (max-width: 768px) {
@@ -50,7 +57,9 @@ body,
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
   background-color: #1C2331; }
-
+  .page-footer, .top-nav-collapse {
+      background-color: rgb(109, 33, 79);
+  }
 
   /* Basic page resets */
   * {
@@ -79,7 +88,7 @@ body,
     font-size: 1.4rem;
   }
   #particles-js {
-  position: relative;
+
     width: 100%;
     height: 30em;
 
@@ -87,13 +96,13 @@ body,
     opacity: 1;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position:40% 50%
   }
   #login {
     background: var(--main-background);
     /* To center the customcard */
     position: absolute;
-    top: 62%;
+    top: 29%;
     left: 15%;
     transform: translate(-50%, -50%);
 
@@ -105,15 +114,13 @@ body,
     background: var(--main-background);
     /* To center the customcard */
     position: absolute;
-    top: 82%;
+    top: 42%;
     left: 15%;
     transform: translate(-50%, -50%);
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
     border-radius: 3px;
   }
-  .navbar{
-    background: var(--magenta);
-  }
+
   /* Validation Related Styles */
 form input:valid {
   /* valid pseudo-selector selects those input fields which have valid values in them */
@@ -127,11 +134,6 @@ form input:invalid {
 
 /* Aesthetics related styles */
 
-.container1 {
-  background: linear-gradient(to right bottom, var(--blue), var(--blue-dark));
-  height: 140%;
-  width: 100vw;
-}
 
 /* This customcard contains the form elements */
 .customcard {
@@ -145,9 +147,21 @@ form input:invalid {
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
   border-radius: 3px;
 }
+.customcardlogin {
+  background: var(--main-background);
+  /* To center the customcard */
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  width:30em;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
 
 .customcard-header {
-  background-color: var(--yellow);
+  background-color :var(--green);
   color: white;
   padding: 3rem;
   text-align: center;
@@ -234,4 +248,11 @@ form input {
   .customcard {
     width: 90%;
   }
+}
+#dispaly_message{
+  top: 30%;
+  left: 50%;
+  width:70%;
+
+  transform: translate(-50%, -50%);
 }

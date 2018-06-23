@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var phoneNumber = document.getElementById("phoneNumber");
   var password = document.getElementById("password");
   var confirmPassword = document.getElementById("confirm_password");
-
+  var cat = document.getElementsByName("cat");
   var isFormValid = false;
   var errorMessage = "";
 
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         isFormValid = false;
         errorMessage += `- ${item.id} is invalid \n\n`;
+
       }
     }
 
@@ -28,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (password.value !== confirmPassword.value) {
       isFormValid = false;
       errorMessage += "- Passwords do not match \n\n";
+      password.focus();
+
     }
 
     // Check if email is correct.
@@ -48,16 +51,17 @@ document.addEventListener("DOMContentLoaded", function() {
       errorMessage += "- PhoneNumber should be exactly 10 digits long \n\n";
     }
 
-    // Check if age is valid.
-    if (!age.value.match(/^[0-9]+$/)) {
-      isFormValid = false;
-      errorMessage += "- Age is not a number \n\n";
+    // Checkthe category is valid.
+    if ( ( cat.item(0).checked == false ) && ( cat.item(1).checked == false ) )
+    {
+          isFormValid = false;
+      errorMessage += "- Please choose your Category: Student or Employee\n\n";
+
     }
 
-    if (age.value < 1 || age.value > 100) {
-      isFormValid = false;
-      errorMessage += "- Age should be between 1 and 100 \n\n";
-    }
+
+    // Check if age is valid.
+
 
     if (!isFormValid) {
       alert(
