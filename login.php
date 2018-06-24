@@ -1,5 +1,9 @@
-<?php include('header.php') ?>
-
+<?php include('header.php');
+include 'usersession.php';
+if (isset($_SESSION['username'])) {
+  header('location:welcome.php');
+}
+ ?>
 
 <div class="container1">
     <div class="customcardlogin">
